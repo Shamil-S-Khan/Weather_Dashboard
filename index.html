@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Weather App</h2>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+          <li><a href="forecast.html"><i class="fas fa-chart-line"></i> Tables</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="profile-icon">
+          <img src="pfp.png" alt="Profile Icon" />
+        </div>
+        <h1>Weather Dashboard</h1>
+        <div class="weather-widget">
+          <div class="search-bar">
+            <input type="text" id="cityInput" placeholder="Enter city name" />
+            <button id="getWeatherBtn">
+              <span class="button-text">Get Weather</span>
+            </button>
+          </div>
+          <div id="currentWeather"></div>
+          <div class="recent-searches">
+            <h4>Recent Searches</h4>
+            <ul id="recentSearchesList"></ul>
+          </div>
+          <canvas id="tempBarChart"></canvas>
+          <canvas id="weatherPieChart"></canvas>
+          <canvas id="tempLineChart"></canvas>
+        </div>
+        <div class="chatbot-widget">
+          <div id="chatbot"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
